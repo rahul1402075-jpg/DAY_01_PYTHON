@@ -1,0 +1,96 @@
+Dheena wants to know how the grading marks will works in education.could you please help him to learn the grading System. Note:-
+
+100=Grade is S
+90-99=Grade is A
+80-89=Grade is B
+70-79=Grade is C
+60-69=Grade is D
+50-59=Grade is E
+<50=Fail
+Get the subject marks from the user,then Find the average marks.Based on the average marks generate the Students grade marks.
+
+Input Format
+
+First input consists of String
+Second input consists of integer
+Third input consists of integer
+Fourth input consists of integer
+Fifth input consists of integer
+Sixth input consists of integer
+Constraints
+
+No Constraints
+
+Output Format
+
+execute the total Marks,average marks and Grade Mark
+Sample Input 0
+
+John
+100
+99
+100
+100
+99
+Sample Output 0
+
+Name of the Student:John
+Total Mark:498
+Average Mark:99.6
+Grade Mark:A
+Sample Input 1
+
+Nivi
+30
+30
+30
+30
+30
+Sample Output 1
+
+Name of the Student:Nivi
+Total Mark:150
+Average Mark:30.0
+Grade Mark:Fail
+Contest ends in 6 days
+Submissions: 28
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+  n=input()
+m1=int(input())
+m2=int(input())
+m3=int(input())
+m4=int(input())
+m5=int(input())
+t=m1+m2+m3+m4+m5
+avg=t/5
+g=" "
+print(f"Name of the Student:{n}")
+print(f"Total Mark:{t}")
+print(f"Average Mark:{avg}")
+avg=int(avg)
+if avg==100:
+    g="S"
+elif 90<=avg<=99:
+    g="A"
+elif 80<=avg<=89:
+    g="B"
+elif 70<=avg<=79:
+    g="C"
+elif 60<=avg<=69:
+    g="D"
+elif 50<=avg<=59:
+    g="E"
+else:
+    g="Fail"
+
+print(f"Grade Mark:{g}")
+
