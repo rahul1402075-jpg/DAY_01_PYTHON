@@ -1,0 +1,101 @@
+Write a program to execute the Pattern.
+
+Input Format
+
+Input consists single Integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the Pattern.
+
+Sample Input 0
+
+3
+Sample Output 0
+
+  *
+ * *
+*   *
+ * *
+  *
+Sample Input 1
+
+5
+Sample Output 1
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+Sample Input 2
+
+8
+Sample Output 2
+
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *
+Contest ends in 4 days
+Submissions: 24
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+n = int(input().strip())
+2
+​
+3
+# Top half (including middle row)
+4
+for i in range(1, n + 1):
+5
+    spaces = " " * (n - i)
+6
+    if i == 1:
+7
+        print(spaces + "*")
+8
+    else:
+9
+        print(spaces + "*" + " " * (2 * i - 3) + "*")
+10
+​
+11
+# Bottom half
+12
+for i in range(n - 1, 0, -1):
+13
+    spaces = " " * (n - i)
+14
+    if i == 1:
+15
+        print(spaces + "*")
+16
+    else:
+17
+        print(spaces + "*" + " " * (2 * i - 3) + "*")
