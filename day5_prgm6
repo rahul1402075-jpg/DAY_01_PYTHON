@@ -1,0 +1,78 @@
+Write the program to execute the pattern.
+
+Input Format
+
+Input consists of Single integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the Pattern.
+
+Sample Input 0
+
+7
+Sample Output 0
+
+*************
+ *AAAAAAAAA*
+  *BBBBBBB*
+   *CCCCC*
+    *DDD*
+     *E*
+      *
+Sample Input 1
+
+8
+Sample Output 1
+
+***************
+ *AAAAAAAAAAA*
+  *BBBBBBBBB*
+   *CCCCCCC*
+    *DDDDD*
+     *EEE*
+      *F*
+       *
+Contest ends in 4 days
+Submissions: 16
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+n = int(input().strip())
+2
+​
+3
+# First row -> 2*n - 1 stars
+4
+print("*" * (2 * n - 1))
+5
+​
+6
+# Middle rows with letters
+7
+ch = ord('A')
+8
+for i in range(1, n - 1):
+9
+    spaces = " " * i
+10
+    letters = chr(ch) * (2 * (n - i) - 3)
+11
+    print(spaces + "*" + letters + "*")
+12
+    ch += 1
+13
+​
+14
+# Last row -> centered single star
+15
+print(" " * (n - 1) + "*")
